@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APICadastroUsuario</name>
+    </assembly>
+    <members>
+        <member name="M:APICadastroUsuario.Configuracoes.v1.UsuariosController.GetAll">
+            <summary>
+            Exibe uma lista com todos os usuários.
+            </summary>
+        </member>
+        <member name="M:APICadastroUsuario.Configuracoes.v1.UsuariosController.Get(System.Int32)">
+            <summary>
+            Exibe um Registro consultado pelo id
+            </summary>
+            <param name="id" example="2">Registro</param>
+        </member>
+        <member name="M:APICadastroUsuario.Configuracoes.v1.UsuariosController.Post(Shared.ViewModels.Usuario.NovoUsuario)">
+            <summary>
+            Adiciona um novo usuário.
+            </summary>
+        </member>
+        <member name="M:APICadastroUsuario.Configuracoes.v1.UsuariosController.Put(Shared.ViewModels.Usuario.AlterarUsuario)">
+            <summary>
+            Altera um usuário existente.
+            </summary>
+        </member>
+        <member name="M:APICadastroUsuario.Configuracoes.v1.UsuariosController.Delete(System.Int32)">
+            <summary>
+            Exclui um usuário.
+            </summary>
+            <param name="id">Id do usuário</param>
+            <remarks>Ao excluir um usuário o mesmo será removido permanentemente da base!</remarks>
+        </member>
+    </members>
+</doc>
