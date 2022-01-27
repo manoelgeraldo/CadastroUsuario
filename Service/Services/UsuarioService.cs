@@ -4,11 +4,6 @@ using Infra.Data.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Service.Interfaces;
 using Shared.ViewModels.Usuario;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service.Services
 {

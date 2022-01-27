@@ -1,10 +1,8 @@
 ﻿using Domain;
 using Infra.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Infra.Data.Repositories
@@ -32,7 +30,7 @@ namespace Infra.Data.Repositories
                                     .ConfigureAwait(false);
         }
 
-        public  async Task<Usuario> AdicionarUsuarioAsync(Usuario usuario)
+        public async Task<Usuario> AdicionarUsuarioAsync(Usuario usuario)
         {
             var verificaUsuario = await VerificaUsuarioAsync(usuario);
 
@@ -71,7 +69,7 @@ namespace Infra.Data.Repositories
             }
             db.Entry(usuarioConsultado).CurrentValues.SetValues(usuario);
             await db.SaveChangesAsync().ConfigureAwait(false);
-            
+
             return usuarioConsultado;
         }
 

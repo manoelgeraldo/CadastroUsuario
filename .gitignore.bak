@@ -3,16 +3,6 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-# Reclassifies the files as csharp
-*.cs linguist-language=csharp
-*.csproj linguist-language=csharp
-*.sln linguist-language=csharp
-
-# And ignore those repositories considering them as documentation
-src/*/wwwroot/* linguist-documentation
-wwwroot/** linguist-documentation
-*/bin/* linguist-documentation
-
 # User-specific files
 *.rsuser
 *.suo

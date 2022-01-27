@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
 #nullable disable
 
@@ -24,10 +24,7 @@ namespace Infra.Data.Migrations
                     Senha = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Ativo = table.Column<bool>(type: "bit", nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Usuarios", x => x.Id);
-                });
+                constraints: table => table.PrimaryKey("PK_Usuarios", x => x.Id));
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

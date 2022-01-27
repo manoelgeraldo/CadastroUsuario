@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shared.ViewModels.Usuario
 {
@@ -13,7 +9,7 @@ namespace Shared.ViewModels.Usuario
         /// </summary>
         /// <example>01</example>.
         public int Id { get; set; }
-        
+
         /// <summary>
         /// Nome do usuario.
         /// </summary>
