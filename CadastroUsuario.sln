@@ -13,18 +13,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra.Data", "4-Infra.Dat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Applications", "1-Applications", "{79012C2E-74B0-4557-8D92-F51003006EFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICadastroUsuario", "APICadastroUsuario\APICadastroUsuario.csproj", "{01EAA4E3-8022-4683-82FA-9A89440E1FBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APICadastroUsuario", "APICadastroUsuario\APICadastroUsuario.csproj", "{01EAA4E3-8022-4683-82FA-9A89440E1FBC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Services", "2-Services", "{FB25E17A-FF31-4E92-ADD1-6ADDF1ACA18B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Infra.Shared", "5-Infra.Shared", "{68D91819-2AF6-4F53-9099-13B72E8EB06F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{983A0BFB-4B7E-4262-BA37-DD9AE1C4085C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{983A0BFB-4B7E-4262-BA37-DD9AE1C4085C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C45C42DB-41CB-485A-9EB1-B95FA0D3A34E} = {C45C42DB-41CB-485A-9EB1-B95FA0D3A34E}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.Shared", "Shared\Infra.Shared.csproj", "{8BCECA8D-2288-48EC-982F-726624C2FC3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Shared", "Shared\Infra.Shared.csproj", "{8BCECA8D-2288-48EC-982F-726624C2FC3D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C45C42DB-41CB-485A-9EB1-B95FA0D3A34E} = {C45C42DB-41CB-485A-9EB1-B95FA0D3A34E}
 	EndProjectSection

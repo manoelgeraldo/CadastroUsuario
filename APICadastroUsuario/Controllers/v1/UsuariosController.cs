@@ -25,7 +25,7 @@ namespace APICadastroUsuario.Configuracoes.v1
         [Route("lista-de-usuarios")]
         public async Task<IActionResult> GetAll()
         {
-            var usuarios = await manager.BuscarTodosUsuariosAsync().ConfigureAwait(false);
+            var usuarios = await manager.ExibirUsuariosAsync().ConfigureAwait(false);
             return Ok(usuarios);
         }
 
@@ -39,7 +39,7 @@ namespace APICadastroUsuario.Configuracoes.v1
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get(int id)
         {
-            var usuario = await manager.BuscarUsuarioPorIdAsync(id).ConfigureAwait(false);
+            var usuario = await manager.ObterUsuarioPorIdAsync(id).ConfigureAwait(false);
 
             if (usuario is null)
             {

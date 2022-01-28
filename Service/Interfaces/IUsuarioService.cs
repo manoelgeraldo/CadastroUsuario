@@ -4,9 +4,9 @@ namespace Service.Interfaces
 {
     public interface IUsuarioService
     {
-        Task<IEnumerable<ExibirUsuario>> BuscarTodosUsuariosAsync();
+        Task<IEnumerable<ExibirUsuario>> ExibirUsuariosAsync();
 
-        Task<ExibirUsuario> BuscarUsuarioPorIdAsync(int id);
+        Task<ExibirUsuario> ObterUsuarioPorIdAsync(int id);
 
         Task<ExibirUsuario> AdicionarUsuarioAsync(NovoUsuario usuario);
 

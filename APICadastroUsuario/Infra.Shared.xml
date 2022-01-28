@@ -10,48 +10,6 @@
             </summary>
             <example>01</example>.
         </member>
-        <member name="P:Shared.ViewModels.Usuario.AlterarUsuario.Nome">
-            <summary>
-            Nome do usuario.
-            </summary>
-            <example>Airton Senna</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.AlterarUsuario.DataNascimento">
-            <summary>
-            Data de nascimento.
-            </summary>
-            <example>1960-03-21</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.AlterarUsuario.Email">
-            <summary>
-            Email do usuario.
-            </summary>
-            <example>airtonsenna@gmail.com</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.AlterarUsuario.Telefone">
-            <summary>
-            Email do usuario.
-            </summary>
-            <example>81912345678</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.AlterarUsuario.UF">
-            <summary>
-            Sigla do Estado.
-            </summary>
-            <example>PE</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.AlterarUsuario.Municipio">
-            <summary>
-            Munícipio.
-            </summary>
-            <example>Olinda</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.AlterarUsuario.Senha">
-            <summary>
-            Senha do usuario.
-            </summary>
-            <example>123456</example>.
-        </member>
         <member name="P:Shared.ViewModels.Usuario.ExibirUsuario.Id">
             <summary>
             Id do usuario.

@@ -18,14 +18,14 @@ namespace Service.Services
             this.mapper = mapper;
         }
 
-        public async Task<IEnumerable<ExibirUsuario>> BuscarTodosUsuariosAsync()
+        public async Task<IEnumerable<ExibirUsuario>> ExibirUsuariosAsync()
         {
-            return mapper.Map<IEnumerable<Usuario>, IEnumerable<ExibirUsuario>>(await repository.BuscarTodosUsuariosAsync().ConfigureAwait(false));
+            return mapper.Map<IEnumerable<Usuario>, IEnumerable<ExibirUsuario>>(await repository.ExibirUsuariosAsync().ConfigureAwait(false));
         }
 
-        public async Task<ExibirUsuario> BuscarUsuarioPorIdAsync(int id)
+        public async Task<ExibirUsuario> ObterUsuarioPorIdAsync(int id)
         {
-            return mapper.Map<ExibirUsuario>(await repository.BuscarUsuarioPorIdAsync(id).ConfigureAwait(false));
+            return mapper.Map<ExibirUsuario>(await repository.ObterUsuarioPorIdAsync(id).ConfigureAwait(false));
         }
 
         public async Task<ExibirUsuario> AdicionarUsuarioAsync(NovoUsuario novoUsuario)
@@ -47,7 +47,7 @@ namespace Service.Services
 
             if (usuarioAlterado.Senha is null)
             {
-                var usuario = await repository.BuscarUsuarioPorIdAsync(usuarioAlterado.Id).ConfigureAwait(false);
+                var usuario = await repository.ObterUsuarioPorIdAsync(usuarioAlterado.Id).ConfigureAwait(false);
                 usuarioAlterado.Senha = usuario.Senha;
             }
             ConverteSenhaEmHash(usuarioAlterado);
@@ -56,7 +56,7 @@ namespace Service.Services
 
         public async Task<ExibirUsuario> ExcluirUsuario(int id)
         {
-            var usuario = await repository.BuscarUsuarioPorIdAsync(id).ConfigureAwait(false);
+            var usuario = await repository.ObterUsuarioPorIdAsync(id).ConfigureAwait(false);
 
             if (usuario == null)
             {

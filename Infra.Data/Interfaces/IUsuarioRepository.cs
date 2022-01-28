@@ -6,9 +6,9 @@ namespace Infra.Data.Interfaces
 {
     public interface IUsuarioRepository
     {
-        Task<IEnumerable<Usuario>> BuscarTodosUsuariosAsync();
+        Task<IEnumerable<Usuario>> ExibirUsuariosAsync();
 
-        Task<Usuario> BuscarUsuarioPorIdAsync(int id);
+        Task<Usuario> ObterUsuarioPorIdAsync(int id);
 
         Task<Usuario> AdicionarUsuarioAsync(Usuario usuario);
 

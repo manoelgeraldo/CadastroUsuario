@@ -16,14 +16,14 @@ namespace Infra.Data.Repositories
             this.db = db;
         }
 
-        public async Task<IEnumerable<Usuario>> BuscarTodosUsuariosAsync()
+        public async Task<IEnumerable<Usuario>> ExibirUsuariosAsync()
         {
             return await db.Usuarios.AsNoTracking()
                                     .ToListAsync()
                                     .ConfigureAwait(false);
         }
 
-        public async Task<Usuario> BuscarUsuarioPorIdAsync(int id)
+        public async Task<Usuario> ObterUsuarioPorIdAsync(int id)
         {
             return await db.Usuarios.AsNoTracking()
                                     .SingleOrDefaultAsync(x => x.Id == id)
@@ -46,7 +46,7 @@ namespace Infra.Data.Repositories
 
         private async Task<Usuario> VerificaUsuarioAsync(Usuario novoUsuario)
         {
-            var listaUsuarios = await BuscarTodosUsuariosAsync();
+            var listaUsuarios = await ExibirUsuariosAsync();
 
             var usuarioVerificado = listaUsuarios.FirstOrDefault(x => x.Nome == novoUsuario.Nome ||
                                                               x.DataNascimento == novoUsuario.DataNascimento ||
