@@ -48,16 +48,16 @@ namespace Infra.Data.Repositories
         {
             var listaUsuarios = await BuscarTodosUsuariosAsync();
 
-            var usuarioVerificado = listaUsuarios.Single(x => x.Nome == novoUsuario.Nome ||
+            var usuarioVerificado = listaUsuarios.FirstOrDefault(x => x.Nome == novoUsuario.Nome ||
                                                               x.DataNascimento == novoUsuario.DataNascimento ||
-                                                              x.Email == novoUsuario.Email);
+                                                              x.Email == novoUsuario.Email, novoUsuario);
 
-            if (usuarioVerificado != null)
+            if (usuarioVerificado.Id == 0)
             {
-                return novoUsuario;
+                return null;
             }
 
-            return null;
+            return usuarioVerificado;
         }
 
         public async Task<Usuario> AlterarUsuarioAsync(Usuario usuario)

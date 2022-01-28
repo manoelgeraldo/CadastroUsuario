@@ -57,6 +57,11 @@ namespace Service.Services
         public async Task<ExibirUsuario> ExcluirUsuario(int id)
         {
             var usuario = await repository.BuscarUsuarioPorIdAsync(id).ConfigureAwait(false);
+
+            if (usuario == null)
+            {
+                return null;
+            }
             usuario.Ativo = false;
             return mapper.Map<ExibirUsuario>(await repository.AlterarUsuarioAsync(usuario).ConfigureAwait(false));
         }
