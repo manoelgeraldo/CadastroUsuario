@@ -13,7 +13,5 @@ namespace Infra.Data.Interfaces
         Task<Usuario> AdicionarUsuarioAsync(Usuario usuario);
 
         Task<Usuario> AlterarUsuarioAsync(Usuario usuario);
-
-        Task<Usuario> ExcluirUsuarioAsync(int id);
     }
 }

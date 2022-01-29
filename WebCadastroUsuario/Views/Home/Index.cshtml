@@ -1,8 +1,62 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Cadastro de Usuário";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Atividade de Avaliação Técnica</h1>
+    <br />
+    <!-- List group -->
+    <div class="list-group" id="myList" role="tablist">
+      <a class="list-group-item list-group-item-action active" data-toggle="list" href="#1" role="tab">
+          1 - Criar uma base de usuários
+      </a>
+      <a class="list-group-item list-group-item-action" data-toggle="list" href="#2" role="tab">
+         2 - Criar uma API
+      </a>
+      <a class="list-group-item list-group-item-action" data-toggle="list" href="#3" role="tab">
+          3 - Criar um CRUD utilizando bootstrap
+      </a>
+      <a class="list-group-item list-group-item-action" data-toggle="list" href="#4" role="tab">
+          4 - Criar a página de alteração
+      </a>
+    </div>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="#1" role="tabpanel">
+          Criar uma base de usuários que permite manter os seguintes dados: 
+                Id,
+                Nome,
+                DataNascimento,
+                eMail,
+                Telefone,
+                UF,
+                Município,
+                Senha,
+                Ativo
+      </div>
+      <div class="tab-pane" id="#2" role="tabpanel">
+          Criar uma API para inserir, consultar, alterar e excluir os usuários da base;
+	      Toda exclusão será lógica (Ativo – 0 ou 1 / True ou False)
+      </div>
+      <div class="tab-pane" id="#3" role="tabpanel">
+          Criar um CRUD utilizando bootstrap, com: listagem dos dados com filtros, incluir, editar e excluir
+                
+                a.	Deverá conter os filtros abaixo para refinar a busca dos usuários:
+                    i.	nome;
+                    ii.	Faixa etária
+                    iii.	Município
+                    iv.	Ativo (S/N)
+                b.	Deverá conter as opções de “Inserir um novo” e “Editar”;
+                c.	Deverá verificar se o usuário já existe, não permitindo inserir duplicados;
+                d.	Ao finalizar o cadastro, a página deverá ser redirecionada para a página de consulta dos usuários;
+      </div>
+      <div class="tab-pane" id="#4" role="tabpanel">
+          Ao finalizar a alteração, a página deverá ser redirecionada para a página de consulta dos usuários;
+      </div>
+    </div>
+    <br />
+    
+    <p>Obs. Senhas devem ser criptografadas no banco (tipo de criptografia fica a sua escolha).</p>
+    <p>Obrigatório: linguagem de programação C# .Net</p>
+
 </div>

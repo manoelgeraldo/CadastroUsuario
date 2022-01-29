@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Shared.ViewModels.Usuario
+﻿namespace Shared.ViewModels.Usuario
 {
     public class AlterarUsuario : NovoUsuario
     {

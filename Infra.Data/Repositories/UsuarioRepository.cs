@@ -72,18 +72,5 @@ namespace Infra.Data.Repositories
 
             return usuarioConsultado;
         }
-
-        public async Task<Usuario> ExcluirUsuarioAsync(int id)
-        {
-            var usuarioConsultado = await db.Usuarios.FindAsync(id).ConfigureAwait(false);
-
-            if (usuarioConsultado != null)
-            {
-                var usuarioExcluido = db.Usuarios.Remove(usuarioConsultado);
-                await db.SaveChangesAsync().ConfigureAwait(false);
-                return usuarioExcluido.Entity;
-            }
-            return null;
-        }
     }
 }

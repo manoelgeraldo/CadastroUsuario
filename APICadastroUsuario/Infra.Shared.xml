@@ -16,42 +16,6 @@
             </summary>
             <example>01</example>.
         </member>
-        <member name="P:Shared.ViewModels.Usuario.ExibirUsuario.Nome">
-            <summary>
-            Nome do usuario.
-            </summary>
-            <example>Airton Senna</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.ExibirUsuario.DataNascimento">
-            <summary>
-            Data de nascimento.
-            </summary>
-            <example>1960-03-21</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.ExibirUsuario.Email">
-            <summary>
-            Email do usuario.
-            </summary>
-            <example>airtonsenna@gmail.com</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.ExibirUsuario.Telefone">
-            <summary>
-            Email do usuario.
-            </summary>
-            <example>81912345678</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.ExibirUsuario.UF">
-            <summary>
-            Sigla do Estado.
-            </summary>
-            <example>PE</example>.
-        </member>
-        <member name="P:Shared.ViewModels.Usuario.ExibirUsuario.Municipio">
-            <summary>
-            Munícipio.
-            </summary>
-            <example>Olinda</example>.
-        </member>
         <member name="P:Shared.ViewModels.Usuario.ExibirUsuario.Ativo">
             <summary>
             Status do usuário.
