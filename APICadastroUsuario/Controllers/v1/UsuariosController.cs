@@ -34,7 +34,7 @@ namespace APICadastroUsuario.Configuracoes.v1
         /// </summary>
         /// <param name="id" example="2">Registro</param>
         [HttpGet("buscar-usuario/{id}")]
-        [ProducesResponseType(typeof(ExibirUsuario), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(AlterarUsuario), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get(int id)

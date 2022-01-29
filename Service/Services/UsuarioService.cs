@@ -23,9 +23,9 @@ namespace Service.Services
             return mapper.Map<IEnumerable<Usuario>, IEnumerable<ExibirUsuario>>(await repository.ExibirUsuariosAsync().ConfigureAwait(false));
         }
 
-        public async Task<ExibirUsuario> ObterUsuarioPorIdAsync(int id)
+        public async Task<AlterarUsuario> ObterUsuarioPorIdAsync(int id)
         {
-            return mapper.Map<ExibirUsuario>(await repository.ObterUsuarioPorIdAsync(id).ConfigureAwait(false));
+            return mapper.Map<AlterarUsuario>(await repository.ObterUsuarioPorIdAsync(id).ConfigureAwait(false));
         }
 
         public async Task<ExibirUsuario> AdicionarUsuarioAsync(NovoUsuario novoUsuario)

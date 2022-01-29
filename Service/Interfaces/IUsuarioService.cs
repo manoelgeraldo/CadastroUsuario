@@ -6,7 +6,7 @@ namespace Service.Interfaces
     {
         Task<IEnumerable<ExibirUsuario>> ExibirUsuariosAsync();
 
-        Task<ExibirUsuario> ObterUsuarioPorIdAsync(int id);
+        Task<AlterarUsuario> ObterUsuarioPorIdAsync(int id);
 
         Task<ExibirUsuario> AdicionarUsuarioAsync(NovoUsuario usuario);
 
