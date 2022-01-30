@@ -8,11 +8,37 @@ namespace WebCadastroUsuario.Controllers
         HttpClient httpClient = new HttpClient();
 
         // GET: Listar usuários
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(string pesquisar)
         {
-            var usuarios = await httpClient.GetFromJsonAsync<List<ExibirUsuario>>("http://localhost:5012/api/Usuarios/lista-de-usuarios");
+            var usuarios = await httpClient.GetFromJsonAsync<IEnumerable<ExibirUsuario>>("http://localhost:5012/api/Usuarios/lista-de-usuarios");
 
+            // Esta linha de código filtra apenas os usuarios ativos
             //var usuariosAtivos = usuarios.Where(x => x.Ativo).ToList();
+
+            ViewData["Pesquisar"] = pesquisar;
+
+            usuarios = usuarios.Where(usuario =>
+            {
+                if (string.IsNullOrWhiteSpace(pesquisar))
+                    return true;
+                if (usuario.Id.ToString().Contains(pesquisar, StringComparison.OrdinalIgnoreCase))
+                    return true;
+                if (usuario.Nome.Contains(pesquisar, StringComparison.OrdinalIgnoreCase))
+                    return true;
+                if (usuario.DataNascimento.ToString().Contains(pesquisar, StringComparison.OrdinalIgnoreCase))
+                    return true;
+                if (usuario.Email.Contains(pesquisar, StringComparison.OrdinalIgnoreCase))
+                    return true;
+                if (usuario.Municipio.Contains(pesquisar, StringComparison.OrdinalIgnoreCase))
+                    return true;
+                if (usuario.Telefone.Contains(pesquisar, StringComparison.OrdinalIgnoreCase))
+                    return true;
+                if (usuario.Municipio.Contains(pesquisar, StringComparison.OrdinalIgnoreCase))
+                    return true;
+                if ((usuario.Ativo ? "ativo" : "inativo").Contains(pesquisar, StringComparison.OrdinalIgnoreCase))
+                    return true;
+                return false;
+            }).OrderByDescending(x => x.Ativo).ThenBy(x => x.Id).ToArray();
 
             return View(usuarios);
         }
